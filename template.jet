@@ -1,0 +1,19 @@
+{{ range key, val := .Metadata }}
+  Key {{ key }}:
+  {{ if val.IsMap }}
+    {{ range k, v := val.Value }}
+      Key {{ k }}:
+      {{ if v.IsMap }}
+        Map: {{ v.Value }}
+      {{ else if v.IsArray }}
+        Array: {{ v.Value }}
+      {{ else }}
+        Scalar: {{ v.Value }}
+      {{ end }}
+    {{ end }}
+  {{ else if val.IsArray }}
+    Array: {{ val.Value }}
+  {{ else }}
+    Scalar: {{ val.Value }}
+  {{ end }}
+{{ end }}

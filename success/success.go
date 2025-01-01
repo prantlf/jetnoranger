@@ -62,7 +62,7 @@ func (m *mapWrapper) Range() (reflect.Value, reflect.Value, bool) {
 }
 
 func (_ *mapWrapper) ProvidesIndex() bool {
-	return false
+	return true
 }
 
 // load the template

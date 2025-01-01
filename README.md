@@ -1,6 +1,8 @@
-# Demonstrate Unrecognised jet.Ranger Interface
+# Demonstrate Unrecognised jet.Ranger Interface (NOW FIXED)
 
 This repo demonstrates a problem with the recognition of rangeable interface in the jet template engine. The template execution context includes a rangeable map, which values can be also rangeable maps. When using `github.com/CloudyKit/jet` the template execution works well. When using `github.com/CloudyKit/jet/v6`, only the first-level map is recognised as rangeable. The second-level is not.
+
+**UPDATE**: The problem was fixed by @sauerbraten in [#221](https://github.com/CloudyKit/jet/pull/221). Thank you very much! The latest commits in this repo upgraded the dependency on `github.com/CloudyKit/jet/v6@master` and verified that both `success` and `failure` binaries would produce the same correct output. Thanks again for the very quick fix!
 
 ## Testing
 
